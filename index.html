@@ -38,10 +38,16 @@
         html {
             scroll-behavior: smooth;
         }
-        .hero-bg {
-            background-image: url('https://placehold.co/1920x1080/F2F0EB/36454F?text=Sukar');
-            background-size: cover;
-            background-position: center;
+        .hero-bg-pattern {
+            background-color: #36454F;
+            opacity: 0.8;
+            background-image:  linear-gradient(135deg, #c1a95e 25%, transparent 25%), linear-gradient(225deg, #c1a95e 25%, transparent 25%), linear-gradient(45deg, #c1a95e 25%, transparent 25%), linear-gradient(315deg, #c1a95e 25%, #36454f 25%);
+            background-position:  10px 0, 10px 0, 0 0, 0 0;
+            background-size: 20px 20px;
+            background-repeat: repeat;
+        }
+        .testimonial-slide {
+            transition: opacity 0.5s ease-in-out;
         }
     </style>
 </head>
@@ -57,8 +63,8 @@
                 <!-- Desktop Navigation -->
                 <nav class="hidden md:flex items-center space-x-8">
                     <a href="#products" class="hover:text-brand-gold transition-colors duration-300">Products</a>
+                    <a href="#gifts" class="hover:text-brand-gold transition-colors duration-300">Gift Sets</a>
                     <a href="#about" class="hover:text-brand-gold transition-colors duration-300">Our Story</a>
-                    <a href="#blog" class="hover:text-brand-gold transition-colors duration-300">Journal</a>
                     <a href="#contact" class="hover:text-brand-gold transition-colors duration-300">Contact</a>
                 </nav>
 
@@ -80,19 +86,44 @@
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
             <a href="#products" class="block py-2 text-center hover:bg-brand-gold/10 rounded-md">Products</a>
+            <a href="#gifts" class="block py-2 text-center hover:bg-brand-gold/10 rounded-md">Gift Sets</a>
             <a href="#about" class="block py-2 text-center hover:bg-brand-gold/10 rounded-md">Our Story</a>
-            <a href="#blog" class="block py-2 text-center hover:bg-brand-gold/10 rounded-md">Journal</a>
             <a href="#contact" class="block py-2 text-center hover:bg-brand-gold/10 rounded-md">Contact</a>
         </div>
     </header>
 
     <main>
         <!-- Hero Section -->
-        <section class="hero-bg min-h-[80vh] flex items-center">
-            <div class="container mx-auto px-6 text-center bg-black/30 md:bg-transparent py-16 md:py-0 rounded-lg">
+        <section class="relative bg-brand-charcoal min-h-[80vh] flex items-center justify-center overflow-hidden">
+            <div class="absolute inset-0 hero-bg-pattern z-0"></div>
+            <div class="container relative z-10 mx-auto px-6 text-center py-16 md:py-0 rounded-lg">
                 <h1 class="font-serif text-5xl md:text-7xl font-bold text-white leading-tight">A Taste of Heritage, Redefined.</h1>
                 <p class="text-brand-white/90 mt-4 text-lg max-w-2xl mx-auto">Discover the art of gourmet stuffed dates, handcrafted with passion and the finest ingredients.</p>
                 <a href="#products" class="mt-8 inline-block bg-brand-gold text-white font-bold py-3 px-8 rounded-md hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105">Shop The Collection</a>
+            </div>
+        </section>
+
+        <!-- Trust Badges Section -->
+        <section id="trust-badges" class="bg-brand-gold/10 py-8">
+            <div class="container mx-auto px-6">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                    <div class="flex items-center justify-center gap-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-brand-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-12v4m-2-2h4m5 4h.01M17 12h.01M19 12h.01M12 12h.01M12 10h.01M12 14h.01M12 17h.01M12 7h.01" /></svg>
+                        <span class="font-semibold text-brand-charcoal/80">Halal Certified</span>
+                    </div>
+                    <div class="flex items-center justify-center gap-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-brand-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M14.121 14.121L19 19m-7-7l7-7m-7 7l-7 7m7-7l-7-7" /></svg>
+                        <span class="font-semibold text-brand-charcoal/80">Artisanal Quality</span>
+                    </div>
+                    <div class="flex items-center justify-center gap-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-brand-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path d="M12 14l9-5-9-5-9 5 9 5z" /><path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" /><path stroke-linecap="round" stroke-linejoin="round" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222 4 2.222V20M12 12L8 9.778 4 12l4 2.222L12 12zm8 0l-4-2.222L12 12l4 2.222 4-2.222z" /></svg>
+                        <span class="font-semibold text-brand-charcoal/80">Premium Ingredients</span>
+                    </div>
+                    <div class="flex items-center justify-center gap-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-brand-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+                        <span class="font-semibold text-brand-charcoal/80">Sourced from Qatar</span>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -100,81 +131,237 @@
         <section id="products" class="py-20 md:py-32">
             <div class="container mx-auto px-6">
                 <h2 class="font-serif text-4xl md:text-5xl font-bold text-center">Our Signature Collection</h2>
-                <p class="text-center mt-4 max-w-xl mx-auto text-brand-charcoal/80">Each date is a masterpiece, a perfect harmony of sweet, savory, and nutty notes.</p>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 mt-16">
+                <div class="flex justify-center flex-wrap gap-2 mt-8 mb-12">
+                    <button class="bg-brand-white border border-brand-gold text-brand-gold py-2 px-4 rounded-full text-sm hover:bg-brand-gold hover:text-white transition-colors">All</button>
+                    <button class="bg-brand-white border border-brand-gray text-brand-charcoal/80 py-2 px-4 rounded-full text-sm hover:bg-brand-gray hover:text-white transition-colors">Vegan</button>
+                    <button class="bg-brand-white border border-brand-gray text-brand-charcoal/80 py-2 px-4 rounded-full text-sm hover:bg-brand-gray hover:text-white transition-colors">Nut-Free</button>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
                     <!-- Product Card 1 -->
-                    <div class="text-center group">
-                        <div class="overflow-hidden rounded-lg shadow-lg">
-                            <img src="https://placehold.co/600x700/B97C5B/F2F0EB?text=Pistachio+%26+Rose" alt="Pistachio & Rose Stuffed Dates" class="w-full h-auto object-cover transform group-hover:scale-110 transition-transform duration-500">
+                    <div class="text-center group bg-white rounded-lg shadow-lg p-6 flex flex-col">
+                        <div class="overflow-hidden rounded-lg bg-brand-white p-4">
+                            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" class="w-full h-auto transform group-hover:scale-110 transition-transform duration-500 aspect-square">
+                                <path fill="#B97C5B" d="M54.7,-60.9C69.5,-52.6,79.1,-35.1,81.1,-16.8C83.1,1.5,77.5,20.6,66.1,36.5C54.7,52.4,37.5,65.1,19.2,70.9C0.9,76.7,-18.5,75.6,-36.4,67.6C-54.3,59.6,-70.7,44.7,-78.2,26.7C-85.7,8.7,-84.3,-12.4,-74.7,-29.4C-65.1,-46.4,-47.3,-59.3,-30.2,-66.2C-13.1,-73.1,3.2,-73,20.5,-70.1C37.8,-67.2,54.7,-60.9,54.7,-60.9Z" transform="translate(100 100)" />
+                                <path d="M 100 80 C 120 80, 130 100, 120 120 C 110 140, 90 140, 80 120 C 70 100, 80 80, 100 80 Z" fill="#FFFFFF" />
+                            </svg>
                         </div>
-                        <h3 class="font-serif text-2xl mt-6">Pistachio & Rose</h3>
-                        <p class="mt-2 text-brand-charcoal/70">Aromatic rose petals meet crunchy pistachios.</p>
-                        <span class="inline-block mt-2 font-bold text-brand-gold">$28.00</span>
+                        <h3 class="font-serif text-2xl mt-6">Classic Almond Crunch</h3>
+                        <div class="flex justify-center mt-2 text-yellow-400">★★★★★</div>
+                        <p class="mt-2 text-brand-charcoal/70 flex-grow">The timeless pairing of a soft Medjool date with a toasted almond.</p>
+                        <div class="text-xs text-brand-charcoal/60 mt-4">
+                            <p><b>Ingredients:</b> Medjool Dates, Almonds.</p>
+                            <p><b>Allergens:</b> Contains Nuts.</p>
+                        </div>
+                        <span class="inline-block mt-4 font-bold text-brand-gold text-lg">$24.00</span>
                     </div>
                     <!-- Product Card 2 -->
-                    <div class="text-center group">
-                        <div class="overflow-hidden rounded-lg shadow-lg">
-                            <img src="https://placehold.co/600x700/36454F/F2F0EB?text=Walnut+%26+Cardamom" alt="Walnut & Cardamom Stuffed Dates" class="w-full h-auto object-cover transform group-hover:scale-110 transition-transform duration-500">
+                    <div class="text-center group bg-white rounded-lg shadow-lg p-6 flex flex-col">
+                        <div class="overflow-hidden rounded-lg bg-brand-white p-4">
+                           <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" class="w-full h-auto transform group-hover:scale-110 transition-transform duration-500 aspect-square">
+                                <path fill="#B97C5B" d="M50.4,-57.2C65.5,-48.5,78.1,-31.1,82.2,-11.7C86.3,7.7,81.9,29.1,69.8,44.2C57.7,59.3,37.9,68.1,18.1,72.4C-1.7,76.7,-21.5,76.5,-39.3,68.2C-57.1,59.9,-72.9,43.5,-79.8,24.4C-86.7,5.3,-84.7,-16.5,-74.3,-33.3C-63.9,-50.1,-45.1,-61.9,-27.6,-66.3C-10.1,-70.7,5.9,-67.7,22.4,-64.5C38.8,-61.3,50.4,-57.2,50.4,-57.2Z" transform="translate(100 100)" />
+                                <circle cx="100" cy="100" r="20" fill="#F2F0EB" />
+                                <circle cx="125" cy="80" r="8" fill="#34D399" />
+                                <circle cx="80" cy="120" r="12" fill="#34D399" />
+                            </svg>
                         </div>
-                        <h3 class="font-serif text-2xl mt-6">Walnut & Cardamom</h3>
-                        <p class="mt-2 text-brand-charcoal/70">Earthy walnuts with a hint of warming spice.</p>
-                        <span class="inline-block mt-2 font-bold text-brand-gold">$26.00</span>
+                        <h3 class="font-serif text-2xl mt-6">Tahini-Pistachio Luxe</h3>
+                        <div class="flex justify-center mt-2 text-yellow-400">★★★★★</div>
+                        <p class="mt-2 text-brand-charcoal/70 flex-grow">Creamy tahini and crunchy pistachios in perfect harmony.</p>
+                         <div class="text-xs text-brand-charcoal/60 mt-4">
+                            <p><b>Ingredients:</b> Medjool Dates, Pistachios, Tahini.</p>
+                            <p><b>Allergens:</b> Contains Nuts, Sesame.</p>
+                        </div>
+                        <span class="inline-block mt-4 font-bold text-brand-gold text-lg">$29.00</span>
                     </div>
                     <!-- Product Card 3 -->
-                    <div class="text-center group">
-                        <div class="overflow-hidden rounded-lg shadow-lg">
-                            <img src="https://placehold.co/600x700/C1A95E/F2F0EB?text=Orange+Peel+%26+Almond" alt="Orange Peel & Almond Stuffed Dates" class="w-full h-auto object-cover transform group-hover:scale-110 transition-transform duration-500">
+                    <div class="text-center group bg-white rounded-lg shadow-lg p-6 flex flex-col">
+                        <div class="overflow-hidden rounded-lg bg-brand-white p-4">
+                            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" class="w-full h-auto transform group-hover:scale-110 transition-transform duration-500 aspect-square">
+                              <path fill="#B97C5B" d="M48.2,-53.4C63.6,-43.3,78.2,-21.6,79.8,1.4C81.4,24.5,70.1,49,52.1,61.9C34.1,74.8,9.4,76.1,-13.4,69.5C-36.2,62.9,-57.1,48.4,-67.9,28.8C-78.7,9.2,-79.3,-15.5,-69.8,-33.6C-60.3,-51.7,-40.7,-63.2,-22.3,-65.8C-3.9,-68.4,-1.9,-62.1,10.1,-60.1C22.1,-58.1,48.2,-53.4,48.2,-53.4Z" transform="translate(100 100)" />
+                               <circle cx="100" cy="90" r="4" fill="#DC2626" />
+                               <circle cx="115" cy="105" r="5" fill="#DC2626" />
+                               <circle cx="90" cy="115" r="3" fill="#DC2626" />
+                               <circle cx="130" cy="120" r="2" fill="#4B5563" />
+                               <circle cx="70" cy="80" r="2" fill="#4B5563" />
+                            </svg>
                         </div>
-                        <h3 class="font-serif text-2xl mt-6">Orange Peel & Almond</h3>
-                        <p class="mt-2 text-brand-charcoal/70">Zesty candied orange with toasted almonds.</p>
-                        <span class="inline-block mt-2 font-bold text-brand-gold">$29.00</span>
+                        <h3 class="font-serif text-2xl mt-6">Superfood Boost</h3>
+                        <div class="flex justify-center mt-2 text-yellow-400">★★★★☆</div>
+                        <p class="mt-2 text-brand-charcoal/70 flex-grow">Enhanced with antioxidant-rich goji berries and chia seeds.</p>
+                         <div class="text-xs text-brand-charcoal/60 mt-4">
+                            <p><b>Ingredients:</b> Medjool Dates, Goji Berries, Chia Seeds.</p>
+                            <p><b>Allergens:</b> None.</p>
+                        </div>
+                        <span class="inline-block mt-4 font-bold text-brand-gold text-lg">$32.00</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gift Sets Section -->
+        <section id="gifts" class="py-20 md:py-32 bg-brand-terracotta/10">
+            <div class="container mx-auto px-6">
+                <h2 class="font-serif text-4xl md:text-5xl font-bold text-center">Curated Gift Sets</h2>
+                <p class="text-center mt-4 max-w-xl mx-auto text-brand-charcoal/80">The perfect gift for any occasion, beautifully packaged and ready to delight.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mt-16 max-w-4xl mx-auto">
+                    <!-- Gift Set 1 -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col md:flex-row">
+                        <div class="md:w-1/2 bg-brand-gold/10 p-8 flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-24 w-24 text-brand-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1"><path stroke-linecap="round" stroke-linejoin="round" d="M21 11.25v8.25a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 19.5v-8.25M12 4.875A2.625 2.625 0 1012 10.125A2.625 2.625 0 0012 4.875z" /><path stroke-linecap="round" stroke-linejoin="round" d="M12 10.125v9.375m0-9.375a6 6 0 01-5.98-5.625h11.96A6 6 0 0112 10.125z" /></svg>
+                        </div>
+                        <div class="p-6 md:w-1/2">
+                            <h3 class="font-serif text-2xl">The Eid Collection</h3>
+                            <p class="text-sm mt-2 text-brand-charcoal/70">A festive assortment of our most popular flavors, perfect for sharing during the holidays.</p>
+                            <span class="inline-block mt-4 font-bold text-brand-gold text-lg">$75.00</span>
+                        </div>
+                    </div>
+                     <!-- Gift Set 2 -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden flex flex-col md:flex-row">
+                        <div class="md:w-1/2 bg-brand-charcoal/10 p-8 flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-24 w-24 text-brand-charcoal" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1"><path stroke-linecap="round" stroke-linejoin="round" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+                        </div>
+                        <div class="p-6 md:w-1/2">
+                            <h3 class="font-serif text-2xl">Corporate Gift Box</h3>
+                            <p class="text-sm mt-2 text-brand-charcoal/70">A sophisticated selection for clients and colleagues. Customizable with your brand's logo.</p>
+                            <span class="inline-block mt-4 font-bold text-brand-gold text-lg">$95.00</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- About Us Section -->
-        <section id="about" class="bg-brand-terracotta/10 py-20 md:py-32">
+        <section id="about" class="py-20 md:py-32">
             <div class="container mx-auto px-6">
                 <div class="flex flex-col md:flex-row items-center gap-12 md:gap-20">
-                    <div class="md:w-1/2">
-                        <img src="https://placehold.co/800x600/F2F0EB/36454F?text=Our+Craft" alt="Artisanal process of making stuffed dates" class="rounded-lg shadow-xl w-full">
+                    <div class="md:w-1/2 p-4">
+                        <svg viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg" class="w-full">
+                          <path d="M 20 130 C 20 80, 60 80, 60 130 Z" fill="#B97C5B" stroke="#36454F" stroke-width="2"/>
+                          <path d="M 140 130 C 140 80, 180 80, 180 130 Z" fill="#B97C5B" stroke="#36454F" stroke-width="2" transform="scale(-1, 1) translate(-200, 0)"/>
+                          <ellipse cx="100" cy="60" rx="30" ry="20" fill="#B97C5B"/>
+                          <ellipse cx="100" cy="60" rx="10" ry="5" fill="#36454F"/>
+                          <text x="65" y="145" font-family="Montserrat" font-size="10" fill="#36454F">Handcrafted with Care</text>
+                        </svg>
                     </div>
                     <div class="md:w-1/2 text-center md:text-left">
                         <h2 class="font-serif text-4xl md:text-5xl font-bold">From Our Family to Yours</h2>
-                        <p class="mt-6 text-lg leading-relaxed text-brand-charcoal/80">Sukar began in a small kitchen, with a family recipe passed down through generations. Our mission is to honor this heritage by using only the finest Medjool dates and all-natural ingredients. We believe in the power of simple, beautiful food to bring people together, creating moments of pure delight.</p>
+                        <p class="mt-6 text-lg leading-relaxed text-brand-charcoal/80">Sukar began in a small kitchen, with a family recipe passed down through generations. Our mission is to honor this heritage by using only the finest Medjool dates from Qatar and all-natural ingredients. We believe in the power of simple, beautiful food to bring people together, creating moments of pure delight.</p>
                         <a href="#" class="mt-8 inline-block border border-brand-gold text-brand-gold font-bold py-3 px-8 rounded-md hover:bg-brand-gold hover:text-white transition-all duration-300">Read Our Full Story</a>
                     </div>
                 </div>
             </div>
         </section>
-
-        <!-- Blog/Journal Section -->
-        <section id="blog" class="py-20 md:py-32">
+        
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="py-20 md:py-32 bg-brand-gold/10">
             <div class="container mx-auto px-6">
-                <h2 class="font-serif text-4xl md:text-5xl font-bold text-center">The Journal</h2>
-                <p class="text-center mt-4 max-w-xl mx-auto text-brand-charcoal/80">Inspiration, recipes, and stories from the world of Sukar.</p>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 mt-16">
-                    <!-- Blog Post 1 -->
-                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                        <img src="https://placehold.co/800x500/A9A9A9/FFFFFF?text=Recipe" alt="Dessert with dates" class="w-full h-64 object-cover">
-                        <div class="p-8">
-                            <span class="text-sm text-brand-gray">RECIPES</span>
-                            <h3 class="font-serif text-2xl mt-2">Date & Goat Cheese Bites</h3>
-                            <p class="mt-4 text-brand-charcoal/80">A simple, elegant appetizer for your next gathering that perfectly balances sweet and savory.</p>
-                            <a href="#" class="mt-6 inline-block text-brand-gold font-bold hover:underline">Read More &rarr;</a>
+                <h2 class="font-serif text-4xl md:text-5xl font-bold text-center">Loved Around The World</h2>
+                <div class="relative mt-12 max-w-3xl mx-auto">
+                    <!-- Carousel Wrapper -->
+                    <div id="testimonial-carousel" class="relative overflow-hidden">
+                        <!-- Slide 1 -->
+                        <div class="testimonial-slide text-center">
+                            <div class="flex justify-center mb-4 text-yellow-400 text-2xl">★★★★★</div>
+                            <p class="text-lg md:text-xl font-serif text-brand-charcoal/90 leading-relaxed">"An absolute delight. The pistachio and rose dates are a work of art. They arrived beautifully packaged and tasted even better. A true luxury."</p>
+                            <p class="mt-8 font-sans uppercase tracking-widest text-sm text-brand-gold">Charlotte H. - London 🇬🇧</p>
+                        </div>
+                        <!-- Slide 2 -->
+                        <div class="testimonial-slide text-center hidden">
+                            <div class="flex justify-center mb-4 text-yellow-400 text-2xl">★★★★★</div>
+                            <p class="text-lg md:text-xl font-serif text-brand-charcoal/90 leading-relaxed">"I order from Sukar for all my special occasions. The quality is unmatched and they are the perfect gift. Truly the best dates I have ever had."</p>
+                            <p class="mt-8 font-sans uppercase tracking-widest text-sm text-brand-gold">Fatima A. - Dubai 🇦🇪</p>
+                        </div>
+                        <!-- Slide 3 -->
+                        <div class="testimonial-slide text-center hidden">
+                            <div class="flex justify-center mb-4 text-yellow-400 text-2xl">★★★★★</div>
+                            <p class="text-lg md:text-xl font-serif text-brand-charcoal/90 leading-relaxed">"The orange peel and almond is a spectacular combination. Fast shipping to the US and incredible customer service. Highly recommended."</p>
+                            <p class="mt-8 font-sans uppercase tracking-widest text-sm text-brand-gold">David L. - New York �🇸</p>
+                        </div>
+                         <!-- Slide 4 -->
+                        <div class="testimonial-slide text-center hidden">
+                            <div class="flex justify-center mb-4 text-yellow-400 text-2xl">★★★★★</div>
+                            <p class="text-lg md:text-xl font-serif text-brand-charcoal/90 leading-relaxed">"C'est magnifique! The balance of flavors is perfect. A wonderful treat with my evening tea. I will be ordering again very soon."</p>
+                            <p class="mt-8 font-sans uppercase tracking-widest text-sm text-brand-gold">Amélie Dubois - Paris 🇫🇷</p>
                         </div>
                     </div>
-                    <!-- Blog Post 2 -->
+                    <!-- Prev/Next Buttons -->
+                    <button id="prev-testimonial" class="absolute top-1/2 -translate-y-1/2 left-0 md:-left-16 bg-white/50 rounded-full p-2 hover:bg-white transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-brand-charcoal" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" /></svg>
+                    </button>
+                    <button id="next-testimonial" class="absolute top-1/2 -translate-y-1/2 right-0 md:-right-16 bg-white/50 rounded-full p-2 hover:bg-white transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-brand-charcoal" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Nutrition Section -->
+        <section id="nutrition" class="py-20 md:py-32 bg-brand-white">
+            <div class="container mx-auto px-6">
+                <div class="max-w-3xl mx-auto text-center">
+                    <h2 class="font-serif text-4xl md:text-5xl font-bold">Wholesome by Nature</h2>
+                    <p class="mt-4 max-w-2xl mx-auto text-brand-charcoal/80 leading-relaxed">
+                        Our Superfood Boost variety is a true powerhouse of wellness. We've combined the rich minerals of our Medjool dates with the antioxidant strength of goji berries and the fiber and omega-3 benefits of chia seeds. This synergistic blend offers a comprehensive nutritional profile, supporting everything from natural energy to digestive health in one delicious, guilt-free indulgence.
+                    </p>
+                </div>
+
+                <!-- Nutrition Table -->
+                <div class="mt-16 max-w-2xl mx-auto">
+                    <h3 class="text-center font-serif text-3xl mb-8">Superfood Boost: Nutrition at a Glance</h3>
                     <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                        <img src="https://placehold.co/800x500/B97C5B/FFFFFF?text=Wellness" alt="A cup of tea" class="w-full h-64 object-cover">
-                        <div class="p-8">
-                            <span class="text-sm text-brand-gray">WELLNESS</span>
-                            <h3 class="font-serif text-2xl mt-2">The Surprising Benefits of Dates</h3>
-                            <p class="mt-4 text-brand-charcoal/80">More than just a sweet treat, discover the nutritional powerhouse packed into every date.</p>
-                            <a href="#" class="mt-6 inline-block text-brand-gold font-bold hover:underline">Read More &rarr;</a>
-                        </div>
+                        <table class="w-full text-left">
+                            <thead class="bg-brand-gold/10">
+                                <tr>
+                                    <th class="p-4 font-semibold">Nutrient</th>
+                                    <th class="p-4 font-semibold text-right">Amount per Serving (40g)</th>
+                                    <th class="p-4 font-semibold text-right">% RDA*</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="border-b border-brand-white">
+                                    <td class="p-4">Calories</td>
+                                    <td class="p-4 text-right">125 kcal</td>
+                                    <td class="p-4 text-right">-</td>
+                                </tr>
+                                <tr class="bg-brand-gold/5 border-b border-brand-white">
+                                    <td class="p-4">Total Carbohydrates</td>
+                                    <td class="p-4 text-right">32g</td>
+                                    <td class="p-4 text-right">12%</td>
+                                </tr>
+                                <tr class="border-b border-brand-white">
+                                    <td class="p-4 pl-8">Dietary Fiber</td>
+                                    <td class="p-4 text-right">4.5g</td>
+                                    <td class="p-4 text-right">16%</td>
+                                </tr>
+                                <tr class="bg-brand-gold/5 border-b border-brand-white">
+                                    <td class="p-4 pl-8">Total Sugars</td>
+                                    <td class="p-4 text-right">27g</td>
+                                    <td class="p-4 text-right">-</td>
+                                </tr>
+                                <tr class="border-b border-brand-white">
+                                    <td class="p-4">Protein</td>
+                                    <td class="p-4 text-right">1.5g</td>
+                                    <td class="p-4 text-right">-</td>
+                                </tr>
+                                <tr class="bg-brand-gold/5 border-b border-brand-white">
+                                    <td class="p-4">Potassium</td>
+                                    <td class="p-4 text-right">290mg</td>
+                                    <td class="p-4 text-right">6%</td>
+                                </tr>
+                                <tr class="border-b border-brand-white">
+                                    <td class="p-4">Copper</td>
+                                    <td class="p-4 text-right">0.15mg</td>
+                                    <td class="p-4 text-right">17%</td>
+                                </tr>
+                                <tr class="bg-brand-gold/5">
+                                    <td class="p-4">Manganese</td>
+                                    <td class="p-4 text-right">0.12mg</td>
+                                    <td class="p-4 text-right">5%</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
+                    <p class="text-xs text-center mt-4 text-brand-gray">* Percent Daily Values are based on a 2,000 calorie diet. Values are approximate and may vary.</p>
                 </div>
             </div>
         </section>
@@ -209,8 +396,9 @@
         </div>
     </footer>
 
-    <!-- JavaScript for Mobile Menu -->
+    <!-- JavaScript for Mobile Menu & Testimonials -->
     <script>
+        // Mobile Menu
         const mobileMenuButton = document.getElementById('mobile-menu-button');
         const mobileMenu = document.getElementById('mobile-menu');
 
@@ -218,15 +406,45 @@
             mobileMenu.classList.toggle('hidden');
         });
         
-        // Close menu when a link is clicked
         const mobileMenuLinks = mobileMenu.getElementsByTagName('a');
         for (let link of mobileMenuLinks) {
             link.addEventListener('click', () => {
                 mobileMenu.classList.add('hidden');
             });
         }
+
+        // Testimonial Carousel
+        const prevButton = document.getElementById('prev-testimonial');
+        const nextButton = document.getElementById('next-testimonial');
+        const slides = document.querySelectorAll('.testimonial-slide');
+        let currentSlide = 0;
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.add('hidden');
+                if (i === index) {
+                    slide.classList.remove('hidden');
+                }
+            });
+        }
+
+        prevButton.addEventListener('click', () => {
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            showSlide(currentSlide);
+        });
+
+        nextButton.addEventListener('click', () => {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        });
+
+        // Auto-play testimonials
+        setInterval(() => {
+            nextButton.click();
+        }, 5000); // Change slide every 5 seconds
+
     </script>
 
 </body>
 </html>
-
+�
