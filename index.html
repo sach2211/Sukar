@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sukar | Premium Stuffed Dates</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+
+    <!-- Custom Styles & Configuration for Tailwind -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'sans': ['Montserrat', 'sans-serif'],
+                        'serif': ['Playfair Display', 'serif'],
+                    },
+                    colors: {
+                        'brand-white': '#F2F0EB',
+                        'brand-gray': '#A9A9A9',
+                        'brand-gold': '#C1A95E',
+                        'brand-terracotta': '#B97C5B',
+                        'brand-charcoal': '#36454F',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Small CSS additions for smooth scrolling and other details */
+        html {
+            scroll-behavior: smooth;
+        }
+        .hero-bg {
+            background-image: url('https://placehold.co/1920x1080/F2F0EB/36454F?text=Sukar');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="bg-brand-white text-brand-charcoal font-sans">
+
+    <!-- Header & Navigation -->
+    <header id="header" class="bg-brand-white/80 backdrop-blur-lg sticky top-0 z-50 shadow-sm">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <a href="#" class="font-serif text-3xl font-bold text-brand-gold">Sukar</a>
+                
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="#products" class="hover:text-brand-gold transition-colors duration-300">Products</a>
+                    <a href="#about" class="hover:text-brand-gold transition-colors duration-300">Our Story</a>
+                    <a href="#blog" class="hover:text-brand-gold transition-colors duration-300">Journal</a>
+                    <a href="#contact" class="hover:text-brand-gold transition-colors duration-300">Contact</a>
+                </nav>
+
+                <!-- Cart Icon -->
+                <a href="#" class="relative hidden md:block">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-brand-charcoal hover:text-brand-gold transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                    </svg>
+                </a>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-button" class="md:hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+            <a href="#products" class="block py-2 text-center hover:bg-brand-gold/10 rounded-md">Products</a>
+            <a href="#about" class="block py-2 text-center hover:bg-brand-gold/10 rounded-md">Our Story</a>
+            <a href="#blog" class="block py-2 text-center hover:bg-brand-gold/10 rounded-md">Journal</a>
+            <a href="#contact" class="block py-2 text-center hover:bg-brand-gold/10 rounded-md">Contact</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-bg min-h-[80vh] flex items-center">
+            <div class="container mx-auto px-6 text-center bg-black/30 md:bg-transparent py-16 md:py-0 rounded-lg">
+                <h1 class="font-serif text-5xl md:text-7xl font-bold text-white leading-tight">A Taste of Heritage, Redefined.</h1>
+                <p class="text-brand-white/90 mt-4 text-lg max-w-2xl mx-auto">Discover the art of gourmet stuffed dates, handcrafted with passion and the finest ingredients.</p>
+                <a href="#products" class="mt-8 inline-block bg-brand-gold text-white font-bold py-3 px-8 rounded-md hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105">Shop The Collection</a>
+            </div>
+        </section>
+
+        <!-- Featured Products Section -->
+        <section id="products" class="py-20 md:py-32">
+            <div class="container mx-auto px-6">
+                <h2 class="font-serif text-4xl md:text-5xl font-bold text-center">Our Signature Collection</h2>
+                <p class="text-center mt-4 max-w-xl mx-auto text-brand-charcoal/80">Each date is a masterpiece, a perfect harmony of sweet, savory, and nutty notes.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 mt-16">
+                    <!-- Product Card 1 -->
+                    <div class="text-center group">
+                        <div class="overflow-hidden rounded-lg shadow-lg">
+                            <img src="https://placehold.co/600x700/B97C5B/F2F0EB?text=Pistachio+%26+Rose" alt="Pistachio & Rose Stuffed Dates" class="w-full h-auto object-cover transform group-hover:scale-110 transition-transform duration-500">
+                        </div>
+                        <h3 class="font-serif text-2xl mt-6">Pistachio & Rose</h3>
+                        <p class="mt-2 text-brand-charcoal/70">Aromatic rose petals meet crunchy pistachios.</p>
+                        <span class="inline-block mt-2 font-bold text-brand-gold">$28.00</span>
+                    </div>
+                    <!-- Product Card 2 -->
+                    <div class="text-center group">
+                        <div class="overflow-hidden rounded-lg shadow-lg">
+                            <img src="https://placehold.co/600x700/36454F/F2F0EB?text=Walnut+%26+Cardamom" alt="Walnut & Cardamom Stuffed Dates" class="w-full h-auto object-cover transform group-hover:scale-110 transition-transform duration-500">
+                        </div>
+                        <h3 class="font-serif text-2xl mt-6">Walnut & Cardamom</h3>
+                        <p class="mt-2 text-brand-charcoal/70">Earthy walnuts with a hint of warming spice.</p>
+                        <span class="inline-block mt-2 font-bold text-brand-gold">$26.00</span>
+                    </div>
+                    <!-- Product Card 3 -->
+                    <div class="text-center group">
+                        <div class="overflow-hidden rounded-lg shadow-lg">
+                            <img src="https://placehold.co/600x700/C1A95E/F2F0EB?text=Orange+Peel+%26+Almond" alt="Orange Peel & Almond Stuffed Dates" class="w-full h-auto object-cover transform group-hover:scale-110 transition-transform duration-500">
+                        </div>
+                        <h3 class="font-serif text-2xl mt-6">Orange Peel & Almond</h3>
+                        <p class="mt-2 text-brand-charcoal/70">Zesty candied orange with toasted almonds.</p>
+                        <span class="inline-block mt-2 font-bold text-brand-gold">$29.00</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about" class="bg-brand-terracotta/10 py-20 md:py-32">
+            <div class="container mx-auto px-6">
+                <div class="flex flex-col md:flex-row items-center gap-12 md:gap-20">
+                    <div class="md:w-1/2">
+                        <img src="https://placehold.co/800x600/F2F0EB/36454F?text=Our+Craft" alt="Artisanal process of making stuffed dates" class="rounded-lg shadow-xl w-full">
+                    </div>
+                    <div class="md:w-1/2 text-center md:text-left">
+                        <h2 class="font-serif text-4xl md:text-5xl font-bold">From Our Family to Yours</h2>
+                        <p class="mt-6 text-lg leading-relaxed text-brand-charcoal/80">Sukar began in a small kitchen, with a family recipe passed down through generations. Our mission is to honor this heritage by using only the finest Medjool dates and all-natural ingredients. We believe in the power of simple, beautiful food to bring people together, creating moments of pure delight.</p>
+                        <a href="#" class="mt-8 inline-block border border-brand-gold text-brand-gold font-bold py-3 px-8 rounded-md hover:bg-brand-gold hover:text-white transition-all duration-300">Read Our Full Story</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog/Journal Section -->
+        <section id="blog" class="py-20 md:py-32">
+            <div class="container mx-auto px-6">
+                <h2 class="font-serif text-4xl md:text-5xl font-bold text-center">The Journal</h2>
+                <p class="text-center mt-4 max-w-xl mx-auto text-brand-charcoal/80">Inspiration, recipes, and stories from the world of Sukar.</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 mt-16">
+                    <!-- Blog Post 1 -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                        <img src="https://placehold.co/800x500/A9A9A9/FFFFFF?text=Recipe" alt="Dessert with dates" class="w-full h-64 object-cover">
+                        <div class="p-8">
+                            <span class="text-sm text-brand-gray">RECIPES</span>
+                            <h3 class="font-serif text-2xl mt-2">Date & Goat Cheese Bites</h3>
+                            <p class="mt-4 text-brand-charcoal/80">A simple, elegant appetizer for your next gathering that perfectly balances sweet and savory.</p>
+                            <a href="#" class="mt-6 inline-block text-brand-gold font-bold hover:underline">Read More &rarr;</a>
+                        </div>
+                    </div>
+                    <!-- Blog Post 2 -->
+                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                        <img src="https://placehold.co/800x500/B97C5B/FFFFFF?text=Wellness" alt="A cup of tea" class="w-full h-64 object-cover">
+                        <div class="p-8">
+                            <span class="text-sm text-brand-gray">WELLNESS</span>
+                            <h3 class="font-serif text-2xl mt-2">The Surprising Benefits of Dates</h3>
+                            <p class="mt-4 text-brand-charcoal/80">More than just a sweet treat, discover the nutritional powerhouse packed into every date.</p>
+                            <a href="#" class="mt-6 inline-block text-brand-gold font-bold hover:underline">Read More &rarr;</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="bg-brand-charcoal text-brand-white py-20 md:py-32">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="font-serif text-4xl md:text-5xl font-bold">Get In Touch</h2>
+                <p class="mt-4 max-w-xl mx-auto text-brand-white/80">For inquiries, collaborations, or just to say hello, we'd love to hear from you.</p>
+                <form class="mt-12 max-w-xl mx-auto">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <input type="text" placeholder="Your Name" class="bg-brand-white/10 border border-brand-gray/50 rounded-md p-3 text-white placeholder-brand-white/60 focus:outline-none focus:ring-2 focus:ring-brand-gold transition-all">
+                        <input type="email" placeholder="Your Email" class="bg-brand-white/10 border border-brand-gray/50 rounded-md p-3 text-white placeholder-brand-white/60 focus:outline-none focus:ring-2 focus:ring-brand-gold transition-all">
+                    </div>
+                    <textarea placeholder="Your Message" rows="5" class="w-full mt-6 bg-brand-white/10 border border-brand-gray/50 rounded-md p-3 text-white placeholder-brand-white/60 focus:outline-none focus:ring-2 focus:ring-brand-gold transition-all"></textarea>
+                    <button type="submit" class="mt-8 bg-brand-gold text-white font-bold py-3 px-12 rounded-md hover:bg-opacity-90 transition-all duration-300 transform hover:scale-105">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-brand-white py-12">
+        <div class="container mx-auto px-6 text-center text-brand-charcoal/70">
+            <p class="font-serif text-2xl text-brand-gold">Sukar</p>
+            <div class="flex justify-center space-x-6 mt-4">
+                <a href="#" class="hover:text-brand-gold">Instagram</a>
+                <a href="#" class="hover:text-brand-gold">Facebook</a>
+                <a href="#" class="hover:text-brand-gold">Pinterest</a>
+            </div>
+            <p class="mt-8 text-sm">&copy; 2025 Sukar. All Rights Reserved. A taste of tradition, crafted with love.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Mobile Menu -->
+    <script>
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Close menu when a link is clicked
+        const mobileMenuLinks = mobileMenu.getElementsByTagName('a');
+        for (let link of mobileMenuLinks) {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        }
+    </script>
+
+</body>
+</html>
+
